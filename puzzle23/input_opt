@@ -1,0 +1,44 @@
+set b 57
+set c b
+jnz a 2
+jnz 1 5
+mul b 100
+sub b -100000
+set c b
+sub c -17000
+
+j3:
+set f 1
+set d 2
+
+j2: set e 2
+
+j1:
+set g d = starts at 2, 3, 4, 5...
+mul g e = 2, 3, 4, 5...
+sub g b = 105700... -> for e 2,3,4... and then d 2,3,4...
+
+b = e*d
+
+
+jnz g 2
+set f 0
+
+sub e -1 3, 4...
+set g e
+sub g b 3,4...- 105700 -> 105697
+j1: jnz g -8
+
+sub d -1 : 3 4 5
+set g d
+sub g b 3,4,5... - 105700 -> 105697
+j2: jnz g -13
+
+jnz f 2
+sub h -1
+set g b
+sub g c
+jnz g 2
+jnz 1 3
+sub b -17
+j3: jnz 1 -23
